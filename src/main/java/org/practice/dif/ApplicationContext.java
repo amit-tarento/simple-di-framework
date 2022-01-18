@@ -36,7 +36,6 @@ public class ApplicationContext {
             String packageName = configClass.getPackageName();
             Class[] classArray = getClasses(packageName);
             for (Class clss : classArray) {
-                //Class clss = Class.forName(className.getName());
                 if (clss.isAnnotationPresent(Component.class) || clss.isAnnotationPresent(Repository.class) || clss.isAnnotationPresent(Service.class)) {
                     Constructor constructor = clss.getConstructor();
                     constructor.setAccessible(true);
