@@ -1,6 +1,5 @@
 package org.practice.dif;
 
-import org.practice.Config;
 import org.practice.dif.annotation.Component;
 import org.practice.dif.annotation.Configuration;
 import org.practice.dif.annotation.Inject;
@@ -21,7 +20,7 @@ public class ApplicationContext {
 
     private Map<Class<?>, Object> container = new HashMap<>();
 
-    public ApplicationContext(Class<Config> configClass) throws Exception {
+    public ApplicationContext(Class<?> configClass) throws Exception {
         init(configClass);
     }
 
